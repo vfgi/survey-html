@@ -5,12 +5,24 @@
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <meta name="theme-color" content="#000000"/>
         <title>Survey Test</title>
-        <script defer="defer" src="main.d3c8cf63.js"></script>
-        <link href="main.e6c13ad2.css" rel="stylesheet">
+        <script defer="defer" src="main.js"></script>
+        <link href="main.css" rel="stylesheet">
+        
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="survey-test-container"></div>
-        <div>teste</div>
+        <div class="html-test-survey">
+            <span id="thanks">Thanks for using this survey!!!</span>
+            <span id="thanks">If you want to run the survey again just click the button bellow</span>
+            <button id="reload-button" onclick="clearSurvey()">Run Survey Again</button>
+        </div>
+        <script>
+            function clearSurvey(){
+                localStorage.clear();
+                window.location.href = window.location.href
+            }
+        </script>
+        
     </body>
 </html>
